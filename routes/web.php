@@ -43,6 +43,37 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         });
 
         /*
+         * Abd El-Ghany
+         *
+         */
+        //About routes
+        Route::group(['prefix' => 'about'], function () {
+            Route::get('/', ['as' => 'admin.about', 'uses' => 'AboutController@getIndex']);
+            Route::get('/section/{flug}', ['as' => 'admin.about.sec', 'uses' => 'AboutController@getSection']);
+            Route::post('/update', ['as' => 'admin.about.update', 'uses' => 'AboutController@postUpdate']);
+        });
+        //Contact Us
+        Route::group(['prefix'=>'contact'],function (){
+            Route::get('/',['as'=>'admin.contact','uses'=>'ContactUsController@getIndex']);
+            Route::post('/',['as'=>'admin.contact','uses'=>'ContactUsController@postIndex']);
+
+            Route::get('/edit/{id}',['as'=>'admin.contact.edit','uses'=>'ContactUsController@getEdit']);
+            Route::post('/update',['as'=>'admin.contact.update','uses'=>'ContactUsController@postUpdate']);
+
+            Route::get('/delete/{id}',['as'=>'admin.contact.delete','uses'=>'ContactUsController@getDelete']);
+        });
+        // meta
+        Route::group(['prefix'=>'meta'],function (){
+            Route::get('/',['as'=>'admin.meta','uses'=>'MetaController@getIndex']);
+            Route::post('/',['as'=>'admin.meta','uses'=>'MetaController@postIndex']);
+
+            Route::get('/edit/{id}',['as'=>'admin.meta.edit','uses'=>'MetaController@getEdit']);
+            Route::post('/update',['as'=>'admin.meta.update','uses'=>'MetaController@postUpdate']);
+
+            Route::get('/delete/{id}',['as'=>'admin.meta.delete','uses'=>'MetaController@getDelete']);
+        });
+
+        /*
          * admin routes
          */
         Route::group(['prefix' => 'admins'], function () {

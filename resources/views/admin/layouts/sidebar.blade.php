@@ -26,6 +26,28 @@
                     <span class="selected"></span>
                 </a>
             </li>
+            {{--Abd El-ghany--}}
+            <li class="nav-item start @if(Request::route()->getName() == 'admin.about'){{'active open'}}@endif">
+                <a href="{{route('admin.about')}}" class="nav-link nav-toggle">
+                    <i class="fa fa-info-circle"></i>
+                    <span class="title">عن الموقع</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+            <li class="nav-item start @if(Request::route()->getName() == 'admin.contact'){{'active open'}}@endif">
+                <a href="{{route('admin.contact')}}" class="nav-link nav-toggle">
+                    <i class="fa fa-envelope"></i>
+                    <span class="title">تواصل معنا</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
+            <li class="nav-item start @if(Request::route()->getName() == 'admin.meta'){{'active open'}}@endif">
+                <a href="{{route('admin.meta')}}" class="nav-link nav-toggle">
+                    <i class="fa fa-tags"></i>
+                    <span class="title">الكلمات الافتتاحيه</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
 
             <li class="nav-item  @if(Request::route()->getName() == 'admin.admins'){{'active open'}}@endif">
                 <a href="javascript:;" class="nav-link nav-toggle">

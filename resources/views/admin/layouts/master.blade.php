@@ -120,6 +120,7 @@
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script src="{{asset('assets/admin/pages/scripts/dashboard.min.js')}}" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
+        <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="{{asset('assets/admin/layouts/layout2/scripts/layout.min.js')}}" type="text/javascript"></script>
         <script src="{{asset('assets/admin/layouts/layout2/scripts/demo.min.js')}}" type="text/javascript"></script>
